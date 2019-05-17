@@ -16,12 +16,12 @@ class TabLink {
       // If `all` is true, select all cards regardless of their data attribute values
       // this.cards = 
       this.cards = document.querySelectorAll('.card');
-       console.log('IF TRUE: ', this.tabData);
+       console.log('IF TRUE: ', this.cards);
     } else {
       // else if `all` is false, only select the cards with matching this.tabData values
       // this.cards = ;
       this.cards = document.querySelectorAll(`.card[data-tab="${this.tabData}"]`);
-      console.log('ELSE FALSE: ' + this.tabData);
+      console.log('ELSE FALSE: ', this.cards);
     }
 
      // <- Delete this comment block when you work on the if statement
@@ -40,7 +40,7 @@ class TabLink {
     // this.tabElement.addEventListener();
     this.tabElement.addEventListener('click', () => {
       this.selectTab()
-      //console.log('clicked')
+      console.log('clicked')
     });
 
     //testing output of this.tabData (see result of each click)
@@ -102,7 +102,7 @@ class TabCard {
 */
 let tabs = document.querySelectorAll(".tab");
 
-tabs.forEach((tabs) => {
-  return new TabLink(tabs)
+tabs.forEach(tab => {
+  return new TabLink(tab)
 })
 
