@@ -32,7 +32,7 @@ class TabLink {
      // this.cards = Array.from(this.cards).map();0
 
       this.cards = Array.from(this.cards).map(card => {
-          new TabCard(card)
+          return new TabCard(card)
           console.log('card: ', card)
       });0
 
@@ -40,13 +40,13 @@ class TabLink {
     // this.tabElement.addEventListener();
     this.tabElement.addEventListener('click', () => {
       this.selectTab()
-      console.log('clicked')
+      //console.log('clicked')
     });
 
     //testing output of this.tabData (see result of each click)
-    this.tabElement.addEventListener('click', () => {
-      console.log("this.tabData: ", this.tabData);
-    })
+    // this.tabElement.addEventListener('click', () => {
+    //   console.log("this.tabData: ", this.tabData);
+    // })
   }
 
   selectTab(){
